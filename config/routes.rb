@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :advertisements
+  resources :posts
 #  get 'posts/index'
 
 #  get 'posts/show'
@@ -7,7 +9,7 @@ Rails.application.routes.draw do
 
 #  get 'posts/edit'
 
-  resources :posts
+
 
 #  get 'welcome/index'
 
