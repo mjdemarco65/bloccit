@@ -13,7 +13,7 @@ RSpec.describe User, type: :model do
       it { is_expected.to allow_value("user@bloccit.com").for(:email) }
       it { should_not allow_value("userbloccit.com").for(:email) }
 
-    
+
       it { is_expected.to validate_presence_of(:password) }
       it { is_expected.to have_secure_password }
       it { is_expected.to validate_length_of(:password).is_at_least(6) }
@@ -25,6 +25,11 @@ RSpec.describe User, type: :model do
 
       it "should respond to email" do
        expect(user).to respond_to(:email)
+      end
+      it "should format the user's name" do
+        user.name = "bloc user"
+        user.save
+        expect(user.name).to eq "Bloc User"
       end
     end
 
