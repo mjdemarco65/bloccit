@@ -1,3 +1,4 @@
+=begin
 require 'rails_helper'
 
 RSpec.describe SponsoredPostsControllerController, type: :controller do
@@ -70,3 +71,5 @@ RSpec.describe SponsoredPostsControllerController, type: :controller do
     end
 
 end
+
+=end
